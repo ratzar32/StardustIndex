@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters - My Angel's Stardust</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="desktop.css">
+</head>
+
+<body>
+
+    <!-- ===================== DESKTOP (Windows 10, 2016) ===================== -->
+    <div class="desktop">
+        <!-- Wallpaper (GIF): tries wallpaper.gif next to this file first
+             (recommended - download it and save it there), then the alphacoders link. -->
+        <img class="wallpaper" src="wallpaper.gif" alt=""
+             onerror="this.onerror=function(){this.style.display='none'};this.src='https://giffiles.alphacoders.com/215/215472.gif';">
+
+        <div class="desktop-icons">
+            <button class="desk-icon" data-open="explorer" aria-label="Open Chapters folder">
+                <svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Chapters</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ===================== TASKBAR ===================== -->
+    <div class="taskbar">
+        <div class="programs">
+            <div class="icon win" data-target=".startmenu, .icon.win">
+                <i class="fa fa-windows"></i>
+            </div>
+            <div class="icon cortana" title="Ask me anything" data-target="#cortana">
+                <i class="fa fa-circle-o"></i>
+            </div>
+            <div class="icon file-app" data-open="explorer" title="Chapters">
+                <i class="fa fa-folder"></i>
+            </div>
+            <div class="icon application minimized edge" data-target=".id-edge">
+                <div class="app-preview preview-edge">
+                    <div class="content"></div>
+                </div>
+                <i class="fa fa-edge"></i>
+            </div>
+            <div class="icon application skype" data-target="#skype">
+                <i class="fa fa-skype"></i>
+            </div>
+        </div>
+
+        <div class="tray">
+            <div class="ico more-icons">
+                <div class="all-icons">
+                    <i class="fa fa-bluetooth" title="Bluetooth Devices"></i>
+                    <i class="fa fa-cloud" title="OneDrive up to date"></i>
+                    <i class="fa fa-envelope" title="You have new unread e-mail messages"></i>
+                    <i class="fa fa-flag" title="Windows Defender requires attention"></i>
+                    <i class="fa fa-keyboard-o" title="Keyboard En-US"></i>
+                    <i class="fa fa-shield" title="Your computer is protected"></i>
+                    <i class="fa fa-wifi" title="Internet Access"></i>
+                    <i class="fa fa-dropbox" title="Dropbox Synced"></i>
+                </div>
+                <div class="fa fa-chevron-up" title="Show hidden icons"></div>
+            </div>
+            <div class="ico" title="Speakers: 80%"><i class="fa fa-volume-up"></i></div>
+            <div class="ico" title="50% remaining"><i class="fa fa-battery-half"></i></div>
+            <!-- Clock is intentionally static -->
+            <div class="ico time">
+                <div class="clock">9:03 PM</div>
+                <div class="date">11/15/2016</div>
+            </div>
+            <div class="ico" title="No new notifications"><i class="fa fa-commenting-o"></i></div>
+            <div class="peek"></div>
+        </div>
+
+        <!-- ===================== START MENU ===================== -->
+        <div class="startmenu">
+            <div class="sm-row">
+                <div class="icons">
+                    <div class="icon top bars" title="Expand">
+                        <i class="fa fa-bars"></i>
+                        <span class="start">start</span>
+                    </div>
+                    <div class="bottom">
+                        <div class="icon profile" title="Guest">
+                            <i class="fa fa-user-circle"></i>
+                            <span>Guest</span>
+                        </div>
+                        <div class="icon file-explorer" data-open="explorer" title="File Explorer">
+                            <i class="fa fa-folder"></i>
+                            <span>File Explorer</span>
+                        </div>
+                        <div class="icon settings" title="Settings">
+                            <i class="fa fa-cog"></i>
+                            <span>Settings</span>
+                        </div>
+                        <div class="icon power" title="Power">
+                            <i class="fa fa-power-off"></i>
+                            <span>Power</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="programs-col">
+                    <p class="title">Recently added</p>
+                    <div class="item" data-open="explorer"><i class="fa fa-folder"></i><span>Chapters</span></div>
+                    <div class="item"><i class="fa fa-skype"></i><span>Skype</span></div>
+                    <div class="item"><i class="fa fa-file-excel-o"></i><span>Excel</span></div>
+                    <p class="title">Most used</p>
+                    <div class="item"><i class="fa fa-chrome"></i><span>Google Chrome</span></div>
+                    <div class="item"><i class="fa fa-firefox"></i><span>Mozilla Firefox</span></div>
+                </div>
+
+                <div class="tiles">
+                    <p class="title">Life at a glance</p>
+                    <div class="tile-grid">
+                        <div class="tile wide chapters-tile" data-open="explorer"><i class="fa fa-folder-open"></i><span>Chapters</span></div>
+                        <div class="tile"><i class="fa fa-file-pdf-o"></i><span>Adobe Acrobat</span></div>
+                        <div class="tile photos"><span>Photos<i class="fa fa-picture-o"></i></span></div>
+                        <div class="tile twitter"><span>Twitter<i class="fa fa-twitter"></i></span></div>
+                        <div class="tile"><i class="fa fa-envelope"></i><span>Mail</span></div>
+                        <div class="tile wide news"><span>News<i class="fa fa-newspaper-o"></i></span></div>
+                        <div class="tile"><i class="fa fa-calculator"></i><span>Calculator</span></div>
+                        <div class="tile"><i class="fa fa-camera"></i><span>Camera</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== CHAPTERS (File Explorer) WINDOW ===================== -->
+    <section class="window" id="explorer" role="dialog" aria-label="Chapters" hidden>
+        <div class="titlebar" data-drag>
+            <i class="fa fa-folder tb-icon"></i>
+            <span class="tb-title" id="winTitle">Chapters</span>
+            <div class="tb-controls">
+                <button class="tb-btn" data-win-min aria-label="Minimise"><i class="fa fa-minus"></i></button>
+                <button class="tb-btn" data-win-max aria-label="Maximise"><i class="fa fa-square-o"></i></button>
+                <button class="tb-btn close" data-win-close aria-label="Close"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+
+        <div class="addressbar">
+            <button class="nav-btn" id="backBtn" aria-label="Back" disabled><i class="fa fa-arrow-left"></i></button>
+            <div class="path" id="pathText">This PC &rsaquo; Chapters</div>
+        </div>
+
+        <!-- View 1: all chapters -->
+        <div class="win-body" id="viewList">
+            <button class="file-item" data-chapter="chapter-1"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><span>Chapter 1</span></button>
+            <!-- Chapters 2-9: when one ships, remove "locked" and the lock icon, add data-chapter="chapter-N",
+                 and copy the chapter-1 view below as <div class="win-body chapter-view" id="chapter-N" hidden>. -->
+            <button class="file-item locked" title="Coming soon" aria-disabled="true"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><i class="fa fa-lock lock"></i><span>Chapter 2</span></button>
+            <button class="file-item locked" title="Coming soon" aria-disabled="true"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><i class="fa fa-lock lock"></i><span>Chapter 3</span></button>
+            <button class="file-item locked" title="Coming soon" aria-disabled="true"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><i class="fa fa-lock lock"></i><span>Chapter 4</span></button>
+            <button class="file-item locked" title="Coming soon" aria-disabled="true"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><i class="fa fa-lock lock"></i><span>Chapter 5</span></button>
+            <button class="file-item locked" title="Coming soon" aria-disabled="true"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><i class="fa fa-lock lock"></i><span>Chapter 6</span></button>
+            <button class="file-item locked" title="Coming soon" aria-disabled="true"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><i class="fa fa-lock lock"></i><span>Chapter 7</span></button>
+            <button class="file-item locked" title="Coming soon" aria-disabled="true"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><i class="fa fa-lock lock"></i><span>Chapter 8</span></button>
+            <button class="file-item locked" title="Coming soon" aria-disabled="true"><svg class="folder-art" viewBox="0 0 64 52" aria-hidden="true"><path class="back" d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path class="front" d="M2 18a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg><i class="fa fa-lock lock"></i><span>Chapter 9</span></button>
+        </div>
+
+        <!-- View 2: inside Chapter 1 -->
+        <div class="win-body chapter-view" id="chapter-1" hidden>
+            <a class="open-chapter" href="https://stardust-moa8.vercel.app/landing.html">
+                <i class="fa fa-book"></i> Open Chapter
+            </a>
+            <div class="chapter-review">
+                <p class="chapter-review-label">Rate this chapter</p>
+                <div class="star-row" id="starRow"></div>
+                <textarea class="review-comment" id="commentBox" placeholder="Leave a comment (optional)"></textarea>
+                <div class="review-footer-row">
+                    <button class="submit-btn" id="submitBtn" disabled>Submit</button>
+                    <span class="review-status" id="reviewStatus"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="statusbar" id="statusText">9 items</div>
+    </section>
+
+    <!-- ===================== EDGE APP (opens chapter 1's site) ===================== -->
+    <div class="id-edge app minimized">
+        <div class="toolbar draggable">
+            <div class="tab">
+                <i class="fa fa-list-alt"></i>
+                <span>Start</span>
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+        <div class="addressbar draggable">
+            <i class="fa fa-arrow-left"></i>
+            <i class="fa fa-arrow-right"></i>
+            <i class="fa fa-refresh"></i>
+            <span class="divider"></span>
+            <input class="edge-url" value="stardust-moa8.vercel.app/landing.html" aria-label="Address">
+        </div>
+        <!-- src is filled in on first open (see desktop.js) so the other site isn't loaded for nothing -->
+        <iframe class="edge-browser" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/jquery-ui.min.js"></script>
+    <script src="desktop.js"></script>
+    <script src="reviews.js"></script>
+</body>
+
+</html>

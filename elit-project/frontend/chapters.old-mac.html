@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters - My Angel's Stardust</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="mac-desktop.css">
+</head>
+
+<body class="mac-desktop">
+
+    <a href="index.html" class="site-logo mac-logo">My Angel's Stardust</a>
+
+    <div class="desktop-icons">
+
+        <button class="folder-icon" data-window="chapter-1">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/>
+            </svg>
+            <span>Chapter 1</span>
+        </button>
+
+        <!-- Chapters 2-9: identical structure, each pointing at its own
+             data-window id. Swap the matching .finder-window's contents
+             (below) from "locked" to a real chapter link once it ships. -->
+        <button class="folder-icon" data-window="chapter-2">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+            <span>Chapter 2</span>
+        </button>
+        <button class="folder-icon" data-window="chapter-3">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+            <span>Chapter 3</span>
+        </button>
+        <button class="folder-icon" data-window="chapter-4">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+            <span>Chapter 4</span>
+        </button>
+        <button class="folder-icon" data-window="chapter-5">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+            <span>Chapter 5</span>
+        </button>
+        <button class="folder-icon" data-window="chapter-6">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+            <span>Chapter 6</span>
+        </button>
+        <button class="folder-icon" data-window="chapter-7">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+            <span>Chapter 7</span>
+        </button>
+        <button class="folder-icon" data-window="chapter-8">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+            <span>Chapter 8</span>
+        </button>
+        <button class="folder-icon" data-window="chapter-9">
+            <svg class="folder-svg" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+            <span>Chapter 9</span>
+        </button>
+
+    </div>
+
+    <!-- Finder-style windows, one per chapter. Edit the text/links inside
+         each one directly whenever a chapter ships. -->
+
+    <div class="finder-window" data-window="chapter-1" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 1</span>
+        </div>
+        <div class="finder-body">
+            <a class="inner-folder released" href="https://stardust-moa8.vercel.app/landing.html">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Open Chapter</span>
+            </a>
+
+            <div class="chapter-review">
+                <p class="chapter-review-label">Rate this chapter</p>
+                <div class="star-row" id="starRow"></div>
+                <textarea class="review-comment" id="commentBox" placeholder="Leave a comment (optional)"></textarea>
+                <div class="review-footer-row">
+                    <button class="btn submit-btn" id="submitBtn" disabled>Submit</button>
+                    <span class="review-status" id="reviewStatus"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="finder-window" data-window="chapter-2" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 2</span>
+        </div>
+        <div class="finder-body">
+            <div class="inner-folder locked">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="finder-window" data-window="chapter-3" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 3</span>
+        </div>
+        <div class="finder-body">
+            <div class="inner-folder locked">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="finder-window" data-window="chapter-4" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 4</span>
+        </div>
+        <div class="finder-body">
+            <div class="inner-folder locked">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="finder-window" data-window="chapter-5" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 5</span>
+        </div>
+        <div class="finder-body">
+            <div class="inner-folder locked">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="finder-window" data-window="chapter-6" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 6</span>
+        </div>
+        <div class="finder-body">
+            <div class="inner-folder locked">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="finder-window" data-window="chapter-7" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 7</span>
+        </div>
+        <div class="finder-body">
+            <div class="inner-folder locked">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="finder-window" data-window="chapter-8" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 8</span>
+        </div>
+        <div class="finder-body">
+            <div class="inner-folder locked">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="finder-window" data-window="chapter-9" hidden>
+        <div class="finder-titlebar">
+            <span class="traffic-dot red" data-finder-close></span>
+            <span class="traffic-dot yellow"></span>
+            <span class="traffic-dot green"></span>
+            <span class="finder-title">Chapter 9</span>
+        </div>
+        <div class="finder-body">
+            <div class="inner-folder locked">
+                <svg class="folder-svg small" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg"><path d="M2 8a4 4 0 0 1 4-4h14l6 6h32a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/></svg>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dock: About / Policy / Credits - edit the placeholder text inside
+         each .modal-body below whenever you have the real copy. -->
+    <div id="dock">
+        <button class="dock-icon" data-modal-trigger="about">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="18"/><text x="20" y="27" text-anchor="middle" font-size="20" fill="#111">i</text></svg>
+            <span>About</span>
+        </button>
+        <button class="dock-icon" data-modal-trigger="policy">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="18"/><path d="M20 8l10 4v8c0 8-5 13-10 16-5-3-10-8-10-16v-8z" fill="#111"/></svg>
+            <span>Policy</span>
+        </button>
+        <button class="dock-icon" data-modal-trigger="credits">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="18"/><path d="M20 8l3.5 8 8.5 1-6.5 6 1.5 8.5L20 27l-7 4.5L14.5 23 8 17l8.5-1z" fill="#111"/></svg>
+            <span>Credits</span>
+        </button>
+    </div>
+
+    <div class="modal-overlay" data-modal="about" hidden>
+        <div class="modal-box">
+            <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+            <h3 class="modal-title">About</h3>
+            <p class="modal-body">AAAA BBBB CCCC DDDD - placeholder text, replace with the real About copy whenever you're ready.</p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" data-modal="policy" hidden>
+        <div class="modal-box">
+            <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+            <h3 class="modal-title">Policy</h3>
+            <p class="modal-body">EEEE FFFF GGGG HHHH - placeholder text, replace with the real Policy copy whenever you're ready.</p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" data-modal="credits" hidden>
+        <div class="modal-box">
+            <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+            <h3 class="modal-title">Credits</h3>
+            <p class="modal-body">IIII JJJJ KKKK LLLL - placeholder text, replace with the real Credits copy whenever you're ready.</p>
+        </div>
+    </div>
+
+    <script src="finder.js"></script>
+    <script src="modals.js"></script>
+    <script src="reviews.js"></script>
+</body>
+
+</html>
