@@ -9,7 +9,10 @@ const cors = require('cors');
 const { MongoClient } = require('mongodb');
 
 const app = express();
-app.use(cors());                          // lets your frontend (a different origin) call this API
+// Only your own site(s) may call this API from a browser. Set ALLOWED_ORIGINS in .env
+// (comma-separated, e.g. https://your-site.vercel.app). If unset, any origin is allowed.
+const allowed = (process.env.ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean);
+app.use(cors(allowed.length ? { origin: allowed } : undefined));
 app.use(express.json());                  // lets Express read JSON request bodies
 
 // ---- connect to MongoDB once when the server starts ----
@@ -82,5 +85,39 @@ app.get('/api/review/:chapterId', async (req, res) => {
     res.status(500).json({ error: 'something went wrong reading reviews' });
   }
 });
+
+// ---- GET /api/admin/reviews  (YOU read all reviews here) ----
+// Send your secret in the "x-admin-key" header (must equal ADMIN_KEY in .env).
+// Optional: ?chapterId=chapter-1   and   ?format=csv
+const crypto = require('crypto');
+function keyOk(given) {
+  const real = process.env.ADMIN_KEY || '';
+  if (!real || !given) return false;
+  const a = Buffer.from(String(given)), b = Buffer.from(real);
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
+
+app.get('/api/admin/reviews', async (req, res) => {
+  if (!keyOk(req.get('x-admin-key'))) return res.status(401).json({ error: 'unauthorized' });
+  try {
+    const filter = req.query.chapterId ? { chapterId: String(req.query.chapterId) } : {};
+    const docs = await reviewsCollection.find(filter, { projection: { anonId: 0 } })
+      .sort({ updatedAt: -1 }).toArray();
+
+    if (req.query.format === 'csv') {
+      const esc = v => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+      const rows = [['chapterId', 'score', 'comment', 'updatedAt'].join(',')]
+        .concat(docs.map(d => [d.chapterId, d.score, d.comment, d.updatedAt?.toISOString()].map(esc).join(',')));
+      res.type('text/csv').send(rows.join('\n'));
+    } else {
+      res.json({ count: docs.length, reviews: docs });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'something went wrong reading reviews' });
+  }
+});
+
+app.get('/health', (req, res) => res.json({ ok: true }));
 
 start();
