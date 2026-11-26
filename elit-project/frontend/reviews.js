@@ -11,7 +11,7 @@ function getAnonId() {
 // ---------- star review widget ----------
 const CHAPTER_ID = 'chapter-1';
 // Point this at your deployed backend once it's live (Express + MongoDB Atlas).
-const API_URL = 'https://your-api.example.com/api/review';
+const API_URL = 'https://stardustindex.onrender.com/api/review';
 
 document.addEventListener('DOMContentLoaded', () => {
     const starRow = document.getElementById('starRow');
